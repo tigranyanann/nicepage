@@ -5,18 +5,19 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-header.header {
-    max-height: 80px;
-    
-    .container {
+div.container {
         max-width: 1140px;
-        margin: 0 auto;padding-right: 15px;
+        margin: 0 auto;
+        padding-right: 15px;
         padding-left: 15px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
         width: 100%;
-    }
+}
+
+header.header {
+    max-height: 80px;
     
     .logo a img {
         height: 32px;
@@ -29,6 +30,11 @@ header.header {
         align-items: center;
         justify-content: space-between;
         
+        @media screen and (min-width: 990px) {
+            div.menu-btn {
+                display: none;
+            }
+        }
     }
     
     .menu-btn {
@@ -46,15 +52,85 @@ header.header {
         @media screen and (max-width: 992px) {
             display: none;
         }
+        
+        li{
+            a {
+                padding: 10px 20px;
+                color: #171717;
+                
+                &:hover {
+                    color: #1e4c6f;
+                }
+            }
+            
+            &.green {
+                a {
+                    color: #b8d139;
+                }
+            }
+        }
+        
     }
     
-    ul li a {
-        padding: 10px 20px;
+}
+
+                                                    //MAIN
+section.one {
+    background-color: #f2f2f2;
+    
+    div.all-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h3 {
+        font-size: 48px;
+        font-weight: 200;
+        margin: 60px auto 0;
+        text-align: center;
+        font-weight: 300;
         color: #171717;
     }
     
-    ul li.green a {
-        color: #b8d139;
+    div.m-btn {
+        width: 150px;
+        height: 47px;
+        margin: 40px auto 0;
+        
+        svg {
+            fill: #f2f2f2;
+            stroke-width: 2.5px;
+            stroke: #404040;
+        }
+    }
+    
+    div.im-boxs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .box {
+            background-image: none;
+            box-shadow: 5px 5px 20px 0 rgb(0 0 0 / 40%);
+            margin: 0 10px;
+            max-width: 279px;
+            max-height: 259px;
+            background-color: #fff;
+            
+            div {
+                padding: 30px;
+                text-align: left;
+                
+                h4 {
+                    color: #171717;
+                    font-weight: 700;
+                    font-size: 24px;
+                    margin: 0px;
+                }
+            }
+        }
     }
 }
 

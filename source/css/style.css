@@ -5,10 +5,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-header.header {
-  max-height: 80px;
-}
-header.header .container {
+div.container {
   max-width: 1140px;
   margin: 0 auto;
   padding-right: 15px;
@@ -17,6 +14,10 @@ header.header .container {
   margin-right: auto;
   text-align: center;
   width: 100%;
+}
+
+header.header {
+  max-height: 80px;
 }
 header.header .logo a img {
   height: 32px;
@@ -33,6 +34,11 @@ header.header .header-table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (min-width: 990px) {
+  header.header .header-table div.menu-btn {
+    display: none;
+  }
 }
 header.header .menu-btn {
   font-size: 24px;
@@ -58,6 +64,76 @@ header.header ul li a {
   padding: 10px 20px;
   color: #171717;
 }
+header.header ul li a:hover {
+  color: #1e4c6f;
+}
 header.header ul li.green a {
   color: #b8d139;
+}
+
+section.one {
+  background-color: #f2f2f2;
+}
+section.one div.all-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.one h3 {
+  font-size: 48px;
+  font-weight: 200;
+  margin: 60px auto 0;
+  text-align: center;
+  font-weight: 300;
+  color: #171717;
+}
+section.one div.m-btn {
+  width: 150px;
+  height: 47px;
+  margin: 40px auto 0;
+}
+section.one div.m-btn svg {
+  fill: #f2f2f2;
+  stroke-width: 2.5px;
+  stroke: #404040;
+}
+section.one div.im-boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section.one div.im-boxs .box {
+  background-image: none;
+  -webkit-box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.4);
+  margin: 0 10px;
+  max-width: 279px;
+  max-height: 259px;
+  background-color: #fff;
+}
+section.one div.im-boxs .box div {
+  padding: 30px;
+  text-align: left;
+}
+section.one div.im-boxs .box div h4 {
+  color: #171717;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0px;
 }
