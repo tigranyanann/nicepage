@@ -2,13 +2,13 @@
   list-style: none;
   outline: none;
   text-decoration: none;
+  margin: 0;
+  padding: 0px;
 }
 
 div.container {
   max-width: 1140px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -16,7 +16,16 @@ div.container {
 }
 
 header.header {
-  max-height: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Open Sans", sans-serif;
 }
 header.header .logo a img {
@@ -34,6 +43,13 @@ header.header .header-table {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 15px;
+}
+@media screen and (max-width: 992px) {
+  header.header .header-table {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 @media screen and (min-width: 990px) {
   header.header .header-table div.menu-btn {
@@ -104,6 +120,13 @@ section.one div.all-main div.img {
   background-repeat: no-repeat;
   margin-top: -50px;
 }
+@media screen and (max-width: 576px) {
+  section.one div.all-main div.img {
+    margin-top: 20px;
+    width: 290px;
+    height: 290px;
+  }
+}
 section.one div.all-main div.link {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
@@ -138,7 +161,7 @@ section.one div.im-boxs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 882px;
+  max-width: 928px;
   margin-top: 50px;
 }
 section.one div.im-boxs div.boxs {
@@ -157,6 +180,13 @@ section.one div.im-boxs div.boxs {
   section.one div.im-boxs div.boxs {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 section.one div.im-boxs div.boxs div.box {
@@ -174,10 +204,18 @@ section.one div.im-boxs div.boxs div.box {
 }
 @media screen and (max-width: 768px) {
   section.one div.im-boxs div.boxs div.box {
+    width: 50%;
     margin-bottom: 15px;
-    max-width: 259px;
-    max-height: 211px;
+    max-width: 218px;
+    max-height: 188px;
     padding: 30px 20px;
+    min-height: 131px;
+  }
+}
+@media screen and (max-width: 576px) {
+  section.one div.im-boxs div.boxs div.box {
+    width: 100%;
+    max-width: 300px;
   }
 }
 section.one div.im-boxs div.boxs div.box h4 {

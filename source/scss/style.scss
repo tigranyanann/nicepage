@@ -2,13 +2,13 @@
     list-style: none;
     outline: none;
     text-decoration: none;
+    margin: 0;
+    padding: 0px;
 }
 
 div.container {
         max-width: 1140px;
         margin: 0 auto;
-        padding-right: 15px;
-        padding-left: 15px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -16,7 +16,10 @@ div.container {
 }
 
 header.header {
-    max-height: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Open Sans', sans-serif;
     
     .logo a img {
@@ -29,6 +32,11 @@ header.header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 15px;
+        
+        @media screen and (max-width: 992px) {
+            justify-content: space-around;
+        }
         
         @media screen and (min-width: 990px) {
             div.menu-btn {
@@ -97,6 +105,12 @@ section.one {
             background-size: cover;
             background-repeat: no-repeat;
             margin-top: -50px;
+            
+            @media screen and (max-width: 576px) {
+                margin-top: 20px;
+                width: 290px;
+                height: 290px;
+            }
         }
         
         div.link {
@@ -138,7 +152,7 @@ section.one {
     
     div.im-boxs {
         display: flex;
-        max-width: 882px;
+        max-width: 928px;
         margin-top: 50px;
         
         div.boxs {
@@ -149,6 +163,8 @@ section.one {
             
             @media screen and (max-width: 768px) {
                 flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
             }
             
             div.box {
@@ -164,11 +180,17 @@ section.one {
                 min-height: 199px;
                 
                 @media screen and (max-width: 768px) {
-//                    width: calc(50%);
+                    width: 50%;
                     margin-bottom: 15px;
-                    max-width: 259px;
-                    max-height: 211px;
+                    max-width: 218px;
+                    max-height: 188px;
                     padding: 30px 20px;
+                    min-height: 131px
+                }
+                
+                @media screen and (max-width: 576px) {
+                    width: 100%;
+                    max-width: 300px;
                 }
                 
                 h4 {
